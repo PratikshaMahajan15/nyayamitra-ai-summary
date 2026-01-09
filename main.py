@@ -7,7 +7,7 @@ app = FastAPI(
     version="1.0"
 )
 
-DATASET_PATH = "nyayamitra_final_dataset.csv"
+DATASET_PATH = "data/nyayamitra_final_dataset.csv"
 
 try:
     df = pd.read_csv(DATASET_PATH)
@@ -43,3 +43,4 @@ def ai_case_summary(cnr_number: str):
         "cnr_number": cnr_number,
         "ai_case_summary": summary
     }
+
